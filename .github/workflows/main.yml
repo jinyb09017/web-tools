@@ -1,0 +1,43 @@
+name: github action
+
+# refer to https://github.com/actions/starter-workflows/blob/main/ci/docker-push.yml 
+
+on:
+  # push 时触发，分支为 master
+  push:
+    branches:
+      - master
+
+
+
+jobs:
+
+  test:
+     runs-on: ubuntu-latest
+     permissions: 
+        contents: read
+        packages: write
+        
+     steps:
+        - name: test-step1
+          run: echo 'test-step1'
+        
+  build:
+     runs-on: ubuntu-latest
+     permissions: 
+        contents: read
+        packages: write
+      
+     steps:
+        - name: step1
+          run: echo 'hello'
+
+        - name: step2
+          run: echo 'hello2'  
+          
+        - name: step3
+          run: echo 'hell3'
+
+        - name: step4
+          run: echo 'hello4'           
+          
