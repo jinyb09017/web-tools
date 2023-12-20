@@ -6,7 +6,7 @@ on:
   # push 时触发，分支为 master
   push:
     branches:
-      - master
+      - main
 
 
 
